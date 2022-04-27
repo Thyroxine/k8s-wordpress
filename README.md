@@ -1,5 +1,7 @@
 ## Wordpress in Kubernetes
 
+### This guide will help you to deploy Wordpress on test cluster with persistent storage :-)
+
 1. Install [Helm](https://helm.sh/docs/intro/install/)
 2. Install **NFS Server** on Infrastructure Machine (AlmaLinux). RAID5 for Wordpress Files is mounted to `/mnt/bigvol`, RAID10 for MySQL to `/mnt/smallvol`
 ```shell
