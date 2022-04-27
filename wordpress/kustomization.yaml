@@ -1,0 +1,12 @@
+---
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+  - wordpress-config.yaml
+  - mysql-pvc.yaml
+  - mysql-deployment.yaml
+  - mysql-service.yaml
+  - wordpress-pvc.yaml
+  - wordpress-deployment.yaml
+  - wordpress-service.yaml
+  - wordpress-ingress.yaml

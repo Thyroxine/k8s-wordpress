@@ -1,0 +1,12 @@
+#helm install nfs-raid5 nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --set nfs.server=10.115.33.101 --set nfs.path=/mnt/bigvol --set constraints.enabled=false --set resources.limits.cpu=200m --set resources.limits.memory=512Mi --set resources.requests.cpu=100m --set resources.requests.memory=256Mi
+---
+nfs:
+  server: 10.115.33.101
+  path: /mnt/bigvol
+resources:
+  requests:
+    cpu: '100m'
+    memory: '256Mi'
+  limits:
+    cpu: '200m'
+    memory: '512Mi'

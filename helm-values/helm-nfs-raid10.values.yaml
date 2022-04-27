@@ -1,0 +1,15 @@
+#helm install nfs-raid10 nfs-subdir-external-provisioner/nfs-subdir-external-provisioner --set nfs.server=10.115.33.101 --set nfs.path=/mnt/smallvol --set storageClass.name=raid10-nfs-client --set storageClass.provisionerName=k8s-sigs.io/nfs-raid10 --set resources.limits.cpu=200m --set resources.limits.memory=512Mi --set resources.requests.cpu=100m --set resources.requests.memory=256Mi
+---
+nfs:
+  server: 10.115.33.101
+  path: /mnt/smallvol
+storageClass:
+  name: raid10-nfs-client
+  provisionerName: k8s-sigs.io/nfs-raid10
+resources:
+  requests:
+    cpu: '100m'
+    memory: '256Mi'
+  limits:
+    cpu: '200m'
+    memory: '512Mi'

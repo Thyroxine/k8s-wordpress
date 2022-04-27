@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-sth33.srequest.ru
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: k8s-sth33.srequest.ru
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: wordpress
+                port:
+                  number: 80
+            path: /
